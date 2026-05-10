@@ -1,0 +1,634 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: black;
+    /* background: yellow; */
+}
+.accueil{
+    /* border: 1px solid red; */
+    height: 90vh;
+    background: url(image_principale/image_accueil.png) center/cover;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    /* align-items: center; */
+}
+.accueil header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid blue; */
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: rgb(9, 9, 9,0.8);
+    padding: 0 30px;
+    z-index: 1000;
+}
+.accueil header h1{
+    color:white;
+    /* border: 1px solid red; */
+}
+.accueil header h1 span{
+    color: red;
+}
+.a_contacter_maintenant1,.a_contacter_maintenant2{
+    text-decoration: none;
+    color: white;
+    /* border: 1px solid red; */
+    height: 50px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    border-radius: 5px;
+}
+.accueil header nav{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 30px;
+}
+.accueil header nav a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: transform 0.5s;
+    
+}
+.accueil nav  a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: 0.5s;
+}
+
+.accueil nav a:hover::after{
+    width: 100%;
+}
+.accueil  a:hover{
+    transform: scale(1.05);
+}
+.detail_accueil{
+    /* border: 1px solid red; */
+    margin-top: 120px;
+    /* height: auto; */
+    /* background:radial-gradient(circle at bottom left, rgb(17, 17, 17,0.6), transparent); */
+    background: linear-gradient(to bottom,transparent , rgb(9, 9, 9,0.5), transparent );
+}
+.detail_accueil h1{
+    color: white;
+    font-size: 6rem;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.detail_accueil h1 span{
+    color: red;
+}
+.detail_accueil .p1_accueil{
+    color:rgb(188, 185, 185);
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    /* background: rgba(7, 0, 0, 0.4); */
+    width: auto;
+    margin-bottom: 50px;
+}
+.detail_accueil .p2_accueil_a{
+    /* border: 1px solid red; */
+    text-align: center;
+}
+.detail_accueil .p2_accueil_a a{
+    text-decoration: none;
+    /* border: 1px solid red; */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    /* margin: auto; */
+}
+.detail_accueil .p2_accueil_a .a1{
+    width: 200px;
+    background: red;
+    color: white;
+}
+.detail_accueil .p2_accueil_a .a2{
+    width: 150px;
+    margin-left: 20px;
+    border: 1px solid gray;
+    color: white;
+}
+/* section modele */
+.nos_modeles{
+    padding:30px;
+    background: hsl(214, 33%, 4%);
+}
+.titre_section_modele{
+    /* border: 1px solid ; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.titre_section_modele h3{
+    color: white;
+}
+.titre_section_modele a{
+    color: rgb(210, 205, 205);
+    text-decoration: none;
+}
+.titre_section_modele a span{
+    color: red;
+}
+.modeles{
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px 0;
+    gap: 20px;
+    /* padding: 0 30px; */
+}
+.modeles .modele1, .modeles .modele2,.modeles .modele3{
+    /* border: 1px solid red; */
+    width: 400px;
+    height: 620px;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    position: relative;
+    /* overflow: visible; */
+}
+.modeles .modele:has(details[open]){
+    z-index: 999;
+}
+.modeles .modele1 .img, .modeles .modele2 .img,.modeles .modele3 .img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    /* border-radius: 10px; */
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    z-index: 20;
+}
+.model1_detail, .model2_detail, .model3_detail{
+    border: 1px solid;
+}
+
+.modele_detail{
+    /* border: 1px solid red; */
+    padding-left: 20px;
+    padding-right: 20px;
+    background: hsl(219, 23%, 12%);
+}
+.modele_detail h3{
+    color: white;
+}
+.modele_detail .p1{
+    color: gray;
+}
+.modele_detail .p1 span{
+    color: white;
+}
+.modele_detail .p1,.modele_detail .p2{
+    margin: 5px;
+}
+.modele_detail .p2{
+    color: gray;
+}
+.modele_detail .p2 span{
+    color: red;
+}
+
+.modele_detail img{
+    width: 40px;
+}
+.modele_detail .p1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.boutons_suivanct_precedent{
+    display: flex;
+    justify-content: space-between;
+}
+.boutons_suivanct_precedent button{
+    height: 30px;
+    width: 50px;
+    background: transparent;
+    color: red;
+    font-size: 1.5rem;
+}
+.btn_acheter{
+    margin-left: 10px;
+    height: 40px;
+    width: 100px;
+    margin-bottom: 5px;
+    right: 0;
+    background: transparent;
+    color: red;
+    /* margin:auto; */
+}
+/* service */
+.service{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+}
+.service_detail h3{
+    /* display: inline-flex; */
+    margin: 10px;
+    color: white;
+}
+.service_detail h6{
+    font-size: 1rem;
+    margin: 10px;
+    color: gray;
+}
+.service_detail{
+    display: flex;
+    /* grid-template-columns: 20% 80%; */
+    /* border: 1px solid red; */
+    width: 25%;
+
+}
+.service_detail img{
+    width: 70px;
+}
+.service_detail div{
+    display: flex;
+    flex-direction: column;
+}
+/* a propos de nous */
+.apropos{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 30px;
+}
+.apropos img{
+    width: 100%;
+    height: 400px;
+}
+.apropos div{
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    background: hsl(202, 25%, 6%);
+}
+.apropos div h2{
+    color: white;
+}
+.apropos div p{
+    color: gray;
+    font-size: 1rem;
+}
+.apropos div a{
+    margin-top: 20px;
+    width: 200px;
+}
+/* .apropos div hr{
+    border: none;
+    height: 3px solid red;
+    width: 20px;
+} */
+ /* contacter nous */
+ .contact{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 100px;
+    /* border: 1px solid red; */
+    /* height: auto; */
+}
+ .contact img{
+    width: 100%;
+    height: 570px;
+    /* margin-bottom: 30px; */
+ }
+ .contact div h3{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    /* border:1px solid rebeccapurple; */
+ }
+ .contact div{
+    display: grid;
+    grid-template-rows: 15% 85%;
+    background: hsl(214, 33%, 4%);
+    height: auto;
+    padding-bottom: 30px;
+    /* border: 1px solid red; */
+ }
+ .contact div ul{
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    /* color: red; */
+    padding: 0;
+    color: white;
+ }
+ .contact div ul li{
+    height: 60px;
+    /* color: red; */
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    background: hsl(205, 26%, 9%) ;
+    font-size: 1.3rem;
+
+ }
+ .contact div ul li p{
+    /* border: 1px solid red; */
+    width: 100px;
+ }
+ .contact div ul li a{
+    display: flex;
+    /* border: 1px solid red; */
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: rgba(30, 30, 209, 0.784);
+ }
+.contact div ul li img{
+    height: 60px;
+    width: 60px;
+    margin-left: 30px;
+    
+}
+ /* footer */
+ footer{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+    background: rgb(14, 17, 21);
+    padding-top: 50px;
+    padding-bottom: 50px;
+ }
+
+ footer div p{
+    color: gray;
+  }
+ footer .footer_reseau h2 span{
+    color: red;
+ }
+ footer .footer_reseau img{
+    width: 60px;
+ }
+ /* bouton whatsapp flotant a droite en bas */
+ .btn_whatsapp{
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    background: black;
+    animation: animation_btn_whatsapp 1.5s 3s infinite ease-in-out;
+    z-index: 199;
+ }
+ .btn_whatsapp img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+ }
+ @keyframes animation_btn_whatsapp {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+ }
+ /* bouton pour remonter en haut */
+ .btn_remonter_haut{
+    position: fixed;
+    bottom:20px ;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    background: hsl(222, 17%, 12%);
+    color: red;
+    border-radius: 50%;
+ }
+ /* bouton de la navebarre */
+  .btn_navbarre{
+    margin-right: 50px;
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: white;
+ }
+ /* classe qui serve a faire disparaitre et rendre visible les elements du site  */
+ .hidden{
+    /* display: none; */
+    display: none !important;
+ }
+/* responsive designe */
+@media (min-width:1400px){
+    .nos_modeles{
+        padding: 0 100px;
+    }
+}
+@media (max-width:1000px ) and (min-width:700px) {
+    .accueil header h1{
+        font-size:1rem ;
+    }
+    .accueil header nav{
+        gap: 10px;
+    }
+    .accueil div h1{
+        font-size: 3rem;
+    }
+}
+@media (max-width:700px){
+    /* accueil */
+    /* .accueil{
+        height: 70vh;
+    } */
+    .accueil header h1{
+        font-size: 1.5rem;
+    }
+    /* .a_contacter_maintenant1{
+        display: block;
+    }
+    .a_contacter_maintenant2{
+        display: none;
+    } */
+    .accueil header{
+        width:100%;
+        display: flex;
+        /* flex-direction: column; */
+    }
+    .accueil header nav{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        background: black;
+        top: 80px;
+        right: 50px;
+        width: 50%;
+        padding: 30px;
+        transition: width 0.5s, opacity 0.5s;
+        border-radius: 10px;
+    }
+    .accueil header nav a{
+        border-bottom: 1px solid gray;
+        width: 100%;
+    }
+    .accueil nav  a::after{
+        bottom: -1px;
+    }
+    .a_contacter_maintenant1{
+        margin: auto;
+        margin-right: 40px;
+        border-bottom: 0;
+    }
+    .accueil div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0;
+    }
+    .accueil div h1{
+        font-size: 2.5rem;
+    }
+    .accueil div .p1_accueil{
+        font-size: 1.5rem;
+    }
+    /* nos modeles */
+    .nos_modeles{
+        /* width: 100vw; */
+        margin: 0;
+        padding: 0;
+    }
+    .modeles{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .nos_modeles .titre_section_modele{
+        padding:19px ;
+    }
+    .nos_modeles .titre_section_modele h3{
+        font-size: 0.8rem;
+    }
+    .nos_modeles .titre_section_modele a{
+        font-size: 0.8rem;
+        text-decoration: none;
+    }
+    .nos_modeles .modeles .modele1, .nos_modeles .modeles .modele2, .nos_modeles .modeles .modele3{
+       width: 400px;
+       margin: auto;
+    }
+    .nos_modeles .service{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    .nos_modeles .service .service_detail{
+        width: 90%;
+        margin: auto;
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    /* a propos de moi */
+    .apropos{
+        display: flex;
+        flex-direction: column;
+    }
+    /* contact */
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact div form{
+        width: 90%;
+    }
+    /* footer */
+    footer{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-left: 30px;
+    }
+}
+@media (max-width:500px){
+    /* accueil */
+    .accueil header h1{
+        font-size: 1.5rem;
+    }
+    .accueil .detail_accueil .p1_accueil{
+        font-size: 1rem;
+    }
+    .nos_modeles .modeles .modele1, .nos_modeles .modeles .modele2, .nos_modeles .modeles .modele3{
+       width: 100%;
+       /* margin: auto; */
+    }
+}
+@media (max-width:400px){
+    /* accueil */
+    /* .accueil{
+        height: 70vh;
+    } */
+    .accueil .h1_accueil{
+        font-size: 2rem;
+    }
+    .accueil .detail_accueil .p1_accueil{
+        font-size: 1rem;
+    }
+    /* .accueil .detail_accueil .p2_accueil_a{
+        border: 1px solid red;
+    } */
+    .accueil .detail_accueil .p2_accueil_a .a1{
+        width: 170px;
+    }
+    .accueil .detail_accueil .p2_accueil_a .a2{
+        width: 90px;
+    }
+    /*  */
+}
+details{
+    color: gray;
+    border: 1px solid red;
+    position: absolute;
+    width: 85%;
+    background: hsl(223, 23%, 12%);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    /* z-index: 999; */
+    /* color: rebeccapurple; */
+}
+
